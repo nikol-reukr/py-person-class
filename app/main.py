@@ -9,6 +9,7 @@ class Person:
 
 
 def create_person_list(people: list) -> list:
+    Person.people = {}
     for person in people:
         if person["name"] not in Person.people:
             Person(person["name"], person["age"])
